@@ -41,10 +41,6 @@ function Slider(props) {
                 src={value.src}
                 alt={value.alt}
                 className="banner"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                }}
               />
             </div>
           );

@@ -13,3 +13,16 @@
     }
 
 }
+
+@media screen and (min-width:1200px){
+    .banner-products{
+        &__content{
+            height:180px;
+            &__image{
+                width:100% ;
+                height:180px ;
+            }
+        }
+    
+    }
+}

@@ -31,14 +31,6 @@ $black : #333 ;
     &__trademark ,
     &__contact{
         margin-top:10px ;
-        &__number-phone{
-            background: black;
-            color:white ;
-            padding:10px ;
-        }
-        &__icon{
-            margin-top:10px ;
-        }
     }
     &__logo{
         & a{
@@ -90,17 +82,36 @@ $black : #333 ;
         color:#333 ;
     }
     &__contact{
+        width:100% ;
+        height:auto;
         text-align:center ;
+        position: absolute;
+        bottom:0px;
+        left:0px ;
+        padding:10px 0px ;
+        &__number-phone{
+            background: black;
+            color:white ;
+            padding:10px ;
+            &::after{
+                content: '';
+                clear: both;
+                display: table;
+            }
+        }
+        &__icon{
+            margin-top:10px ;
+        }
         & a {
             color:black ;
             text-decoration: none;
             padding:5px ;
             font-size: 2rem ;
         }
-    }
-    &__trademark{
-        color:#333 ;
-        text-align:center ;
+        &__trademark{
+            color:#333 ;
+            text-align:center ;
+        }
     }
 }
 .cart{

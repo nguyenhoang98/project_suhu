@@ -1,10 +1,11 @@
-import React from "react";
-import "./NavBar.scss";
-import { Link } from "react-router-dom";
-import Search from "../../common/Search/Search";
-import logo from "../../assets/logo.png";
+import React from 'react';
+import './NavBar.scss';
+import { Link } from 'react-router-dom';
+import Search from '../../common/Search/Search';
+import logo from '../../assets/logo.png';
 
 function NavBar(props) {
+  const { handleOnOpenLookUpModal } = props;
   return (
     <div className="navbar">
       <div className="navbar__logo">
@@ -14,7 +15,7 @@ function NavBar(props) {
       <div className="navbar__user">
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/Dang-nhap">
               <span className="navbar__icon">
                 <i className="fas fa-sign-in-alt"></i>
               </span>
@@ -42,7 +43,7 @@ function NavBar(props) {
       </div>
 
       <div className="navbar__search">
-        <Search />
+        <Search handleOnOpenLookUpModal={handleOnOpenLookUpModal} />
       </div>
 
       <div className="navbar__list">
@@ -51,7 +52,7 @@ function NavBar(props) {
             <Link to="/Trang-chu">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Trang chủ
@@ -61,7 +62,7 @@ function NavBar(props) {
             <Link to="/Thoi-trang-nam">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Thời trang nam
@@ -71,7 +72,7 @@ function NavBar(props) {
             <Link to="/Thoi-trang-nu">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Thời trang nữ
@@ -81,7 +82,7 @@ function NavBar(props) {
             <Link to="/Thoi-trang-nu">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Đồ Đôi
@@ -91,7 +92,7 @@ function NavBar(props) {
             <Link to="/Thoi-trang-nu">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               áo khoác
@@ -101,7 +102,7 @@ function NavBar(props) {
             <Link to="/Thoi-trang-nu">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Phụ kiện
@@ -111,7 +112,7 @@ function NavBar(props) {
             <Link to="/hot">
               <span
                 style={{
-                  marginRight: "5px",
+                  marginRight: '5px',
                 }}
               ></span>
               Đặc biệt
@@ -129,22 +130,21 @@ function NavBar(props) {
           0262.621.627
         </div>
         <div className="navbar__contact__icon">
-          <Link to="/" className="navbar__contact">
+          <Link to="/" className="media">
             <i className="fab fa-facebook-square"></i>
           </Link>
-          <Link to="/" className="navbar__contact">
+          <Link to="/" className="media">
             <i className="fab fa-youtube-square"></i>
           </Link>
-          <Link to="/" className="navbar__contact">
+          <Link to="/" className="media">
             <i className="fab fa-instagram"></i>
           </Link>
-          <Link to="/" className="navbar__contact">
+          <Link to="/" className="media">
             <i className="fab fa-twitter-square"></i>
           </Link>
         </div>
+        <div className="navbar__contact__trademark">Bản quyền của Suhu.vn</div>
       </div>
-
-      <div className="navbar__trademark">Bản quyền của Suhu.vn</div>
     </div>
   );
 }

@@ -3,6 +3,7 @@
         flex-basis: 12%;
         height: auto ;
         margin:10px 0px ;
+        position: relative ;
     }
     &__price{
         
@@ -14,4 +15,8 @@
 
     }
 
+}
+
+@media screen and (min-width:1200px){
+    
 }
